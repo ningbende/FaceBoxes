@@ -32,7 +32,7 @@ if not os.path.exists(caffe_model):
     print("use merge_bn.py to generate it.")
     exit()
 
-caffe.set_mode_gpu()
+caffe.set_mode_cpu()
 net = caffe.Net(net_file,caffe_model,caffe.TEST)  
 
 CLASSES = ('background','face')
